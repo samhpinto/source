@@ -1,0 +1,210 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+  /* BASE STYLES
+  /*******************************************/
+
+body {}
+
+
+/******************************************
+  /* LAYOUT
+  /*******************************************/
+header {
+    width: 100%;
+}
+
+header * {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav,
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 248, 248);
+}
+
+nav>ul>li {
+    width: 30%;
+    padding: 2%;
+}
+
+nav>ul> :nth-child(3) {
+    width: 40%;
+}
+
+nav ul li div {
+    float: none;
+    width: 25px;
+    background-color: purple;
+    height: 3px;
+    margin: 6px 0;
+}
+
+nav>ul> :nth-child(1) {
+    display: none;
+}
+
+nav button {
+    float: right;
+}
+
+nav ul li ul li {
+    width: 25%;
+    color: purple;
+    font-weight: 700;
+    text-align: center;
+    padding: 2%;
+}
+
+button {
+    color: rgb(247, 248, 248);
+    background-color: purple;
+}
+
+header+section {
+    width: 100%;
+    background-color: rgb(247, 248, 248);
+}
+
+header+section>* {
+    width: 50%;
+    padding: 5%;
+    background-color: rgb(247, 248, 248);
+    color: purple;
+}
+
+header+section> :nth-child(2) img {
+    float: right;
+    width: 100%;
+}
+
+form input {
+    width: 100%;
+}
+
+section :nth-child(1) section>* {
+    width: 30%;
+}
+
+section :nth-child(1) section form {
+    width: 70%;
+}
+
+section section p {
+    margin: 0;
+}
+
+section :nth-child(3) {
+    width: 100%;
+}
+
+section :nth-child(3) section {
+    width: 25%;
+    padding: 2%;
+}
+
+section :nth-child(3) section img {
+    width: 30%;
+    margin-left: 35%;
+}
+
+section :nth-child(3) section * {
+    width: 100%;
+}
+
+header+section a {
+    padding-top: 5%;
+}
+
+header+section+section {
+    width: 100%;
+}
+
+header+section+section * {
+    padding: 2% 50% 0 7%;
+    color: purple;
+    width: 100%;
+}
+
+footer {}
+
+/******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+@media screen and (max-width: 550px) {
+    nav>ul> :nth-child(1) {
+        display: block;
+        width: 20%;
+    }
+
+    nav ul li {
+        width: 80%;
+    }
+
+    nav ul li img {
+        width: 30%;
+        margin-left: 25%;
+    }
+
+    nav>ul>li:nth-child(3),
+    nav>ul>li:nth-child(4) {
+        display: none;
+    }
+
+    header+section * {
+        width: 100%;
+    }
+
+    header+section> :nth-child(3)>* {
+        width: 50%;
+        text-align: center;
+    }
+
+    section :nth-child(1) section>*,
+    section :nth-child(1) section form {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    header+section> :nth-child(2) img {
+        width: 80%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    header+section> :nth-child(3)>* {
+        width: 100%;
+        text-align: center;
+    }
+
+    section :nth-child(3) section img {
+        width: 20%;
+        margin-left: 40%;
+    }
+}
